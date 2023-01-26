@@ -17,10 +17,12 @@ const routes: Routes = [
         path: 'hospitals',
         loadChildren: () => import('./features/hospitals/hospitals.module').then(m => m.HospitalsModule)
       },
+      { path: 'blank', loadChildren: () => import('./features/blank/blank.module').then(m => m.BlankModule) },
+      { path: 'not-found', loadChildren: () => import('./features/notfound/notfound.module').then(m => m.NotfoundModule) },
     ]
   },
-
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: 'home', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: 'not-found', pathMatch: 'full' }
 ];
 
 @NgModule({
