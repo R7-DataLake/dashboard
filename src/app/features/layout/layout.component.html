@@ -1,51 +1,67 @@
-<nz-layout>
-  <nz-sider nzCollapsible nzWidth="200px">
+<nz-layout class="layout">
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
     <div class="logo"></div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-menu-item routerLink="/dashboard" routerLinkActive="ant-menu-item-selected">
-        <span nz-icon nzType="pie-chart"></span>
-        <span>Dashboard</span>
-      </li>
-      <li nz-submenu nzTitle="ผู้ใช้งานในระบบ" nzIcon="user">
+      <li nz-menu-group nzTitle="ตัวชี้วัด">
         <ul>
-          <li nz-menu-item routerLink="/users" routerLinkActive="ant-menu-item-selected">รายชื่อผู้ใช้งาน</li>
+          <li nz-submenu nzTitle="Digital Health" nzIcon="dashboard">
+            <ul>
+              <li nz-menu-item>Digital ID</li>
+              <li nz-menu-item>Telemedicine</li>
+              <li nz-menu-item>AI DR Screening</li>
+            </ul>
+          </li>
         </ul>
       </li>
-      <li nz-submenu nzTitle="หน่วยบริการ" nzIcon="team">
+
+      <li nz-submenu nzTitle="Service Plan" nzIcon="appstore">
         <ul>
-          <li nz-menu-item routerLink="/hospitals" routerLinkActive="ant-menu-item-selected">ทะเบียนหน่วยบริการ</li>
+          <li nz-menu-item>โรคหัวใจและหลอดเลือด</li>
+          <li nz-menu-item>มะเร็ง</li>
+          <li nz-menu-item>โรคไม่ติดต่อ</li>
         </ul>
       </li>
-      <!-- <li nz-menu-item>
-        <span nz-icon nzType="file"></span>
-        <span>File</span>
-      </li> -->
+      <li nz-menu-group nzTitle="ข้อมูลพื้นฐาน">
+        <ul>
+          <li nz-submenu nzTitle="ข้อมูลทั่วไป" nzIcon="database">
+            <ul>
+              <li nz-menu-item>จำนวนประชากร</li>
+              <li nz-menu-item>หน่วยบริการ</li>
+            </ul>
+          </li>
+          <li nz-submenu nzTitle="สถิติการให้บริการ" nzIcon="field-time">
+            <ul>
+              <li nz-menu-item>20 อันดับโรค</li>
+              <li nz-menu-item>ผู้ป่วยใน</li>
+              <li nz-menu-item>ผู้ป่วยนอก</li>
+            </ul>
+          </li>
+          <li nz-submenu nzTitle="ทรัพยากรบุคคล" nzIcon="team">
+            <ul>
+              <li nz-menu-item>แยกตามสายงาน</li>
+              <li nz-menu-item>แยกตามความเชี่ยวชาญ</li>
+              <li nz-menu-item>ข้อมูลลูกจ้าง</li>
+            </ul>
+          </li>
+          <li nz-submenu nzTitle="การเงินการคลัง" nzIcon="dollar">
+            <ul>
+              <li nz-menu-item>TPS</li>
+              <li nz-menu-item>PlanFin</li>
+              <li nz-menu-item>Risk Score</li>
+              <li nz-menu-item>Unitcost</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header>
-      <div nz-row>
-        <div nz-col nzFlex="auto"></div>
-        <div nz-col nzFlex="200px" style="text-align: right; padding-right: 16px;">
-          <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
-            Satit Rianpit
-            <span nz-icon nzType="down"></span>
-          </a>
-          <nz-dropdown-menu #menu="nzDropdownMenu">
-            <ul nz-menu>
-              <li nz-menu-item>เปลี่ยนรหัสผ่าน</li>
-              <li nz-menu-item nzDisabled>แก้ไขข้อมูลส่วนตัว</li>
-              <li nz-menu-divider></li>
-              <li nz-menu-item>ออกจากระบบ</li>
-
-            </ul>
-          </nz-dropdown-menu>
-        </div>
-
+    <nz-header></nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
       </div>
-
-    </nz-header>
-    <router-outlet></router-outlet>
-    <nz-footer>เขตสุขภาพที่ 7 ©2023 Implement By Dev@R7 Team</nz-footer>
+    </nz-content>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
   </nz-layout>
 </nz-layout>
