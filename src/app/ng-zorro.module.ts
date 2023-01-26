@@ -21,6 +21,8 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzEmptyModule } from 'ng-zorro-antd/empty';
+import { NzResultModule } from 'ng-zorro-antd/result';
 
 @NgModule({
   declarations: [],
@@ -45,7 +47,9 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzSpaceModule,
     NzToolTipModule,
     NzSelectModule,
-    NzModalModule
+    NzModalModule,
+    NzEmptyModule,
+    NzResultModule
   ],
   exports: [
     NzFormModule,
@@ -67,7 +71,9 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzSpaceModule,
     NzToolTipModule,
     NzSelectModule,
-    NzModalModule
+    NzModalModule,
+    NzEmptyModule,
+    NzResultModule
   ]
 })
 export class NgZorroModule { }

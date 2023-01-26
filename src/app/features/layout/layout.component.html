@@ -6,8 +6,10 @@
         <ul>
           <li nz-submenu nzTitle="Digital Health" nzIcon="dashboard">
             <ul>
-              <li nz-menu-item>Digital ID</li>
-              <li nz-menu-item>Telemedicine</li>
+              <li nz-menu-item routerLink="/kpi/digital-health" routerLinkActive="ant-menu-item-selected">Digital ID
+              </li>
+              <li nz-menu-item routerLink="/kpi/telemedicine" routerLinkActive="ant-menu-item-selected">Telemedicine
+              </li>
               <li nz-menu-item>AI DR Screening</li>
             </ul>
           </li>
@@ -16,9 +18,10 @@
 
       <li nz-submenu nzTitle="Service Plan" nzIcon="appstore">
         <ul>
-          <li nz-menu-item>โรคหัวใจและหลอดเลือด</li>
-          <li nz-menu-item>มะเร็ง</li>
-          <li nz-menu-item>โรคไม่ติดต่อ</li>
+          <li nz-menu-item routerLink="/service-plan/stroke" routerLinkActive="ant-menu-item-selected">
+            โรคหัวใจและหลอดเลือด</li>
+          <li nz-menu-item routerLink="/service-plan/ca" routerLinkActive="ant-menu-item-selected">มะเร็ง</li>
+          <li nz-menu-item routerLink="/service-plan/ncd" routerLinkActive="ant-menu-item-selected">โรคไม่ติดต่อ</li>
         </ul>
       </li>
       <li nz-menu-group nzTitle="ข้อมูลพื้นฐาน">
