@@ -1,27 +1,22 @@
 <nz-layout class="layout">
-  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
+  <nz-sider nzCollapsible nzBreakpoint="lg" nzWidth="220px">
     <div class="logo"></div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-menu-group nzTitle="ตัวชี้วัด">
+      <li nz-submenu nzTitle="Digital Health" nzIcon="dashboard">
         <ul>
-          <li nz-submenu nzTitle="Digital Health" nzIcon="dashboard">
-            <ul>
-              <li nz-menu-item>Digital ID</li>
-              <li nz-menu-item>Telemedicine</li>
-              <li nz-menu-item>AI DR Screening</li>
-            </ul>
-          </li>
+          <li nz-menu-item>Digital ID</li>
+          <li nz-menu-item>Telemedicine</li>
+          <li nz-menu-item>AI DR Screening</li>
         </ul>
       </li>
-
       <li nz-submenu nzTitle="Service Plan" nzIcon="appstore">
         <ul>
-          <li nz-menu-item>โรคหัวใจและหลอดเลือด</li>
+          <li nz-menu-item>Stroke & STEMI</li>
           <li nz-menu-item>มะเร็ง</li>
-          <li nz-menu-item>โรคไม่ติดต่อ</li>
+          <li nz-menu-item>โรคไม่ติดต่อเรื้อรัง</li>
         </ul>
       </li>
-      <li nz-menu-group nzTitle="ข้อมูลพื้นฐาน">
+      <li nz-submenu nzTitle="ข้อมูลพื้นฐาน" nzIcon="appstore">
         <ul>
           <li nz-submenu nzTitle="ข้อมูลทั่วไป" nzIcon="database">
             <ul>
@@ -38,8 +33,8 @@
           </li>
           <li nz-submenu nzTitle="ทรัพยากรบุคคล" nzIcon="team">
             <ul>
-              <li nz-menu-item>แยกตามสายงาน</li>
-              <li nz-menu-item>แยกตามความเชี่ยวชาญ</li>
+              <li nz-menu-item>สายงาน</li>
+              <li nz-menu-item>ความเชี่ยวชาญ</li>
               <li nz-menu-item>ข้อมูลลูกจ้าง</li>
             </ul>
           </li>
@@ -53,6 +48,7 @@
           </li>
         </ul>
       </li>
+
     </ul>
   </nz-sider>
   <nz-layout>
